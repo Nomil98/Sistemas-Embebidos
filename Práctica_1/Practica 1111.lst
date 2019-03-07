@@ -1,0 +1,109 @@
+CCS PCH C Compiler, Version 5.081, 13314               28-feb.-19 11:37
+
+               Filename:   C:\Users\Daniel Limón\Desktop\Tareas 4to Semestre\Sistemas Embebidos\Práctica_1\Practica 1111.lst
+
+               ROM used:   120 bytes (0%)
+                           Largest free fragment is 65416
+               RAM used:   6 (0%) at main() level
+                           7 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 31
+
+*
+00000:  GOTO   0032
+.................... #include<18F4620.h> //Se incluye la librería del PIC 18F4620 
+.................... //////////// Standard Header file for the PIC18F4620 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F4620 
+....................  
+.................... #list 
+....................  
+.................... #fuses HS, NOFCMEN, NOIESO, PUT, NOBROWNOUT, NOWDT // EL HS es el high speed 
+.................... #fuses NOPBADEN, NOMCLR, STVREN, NOLVP, NODEBUG 
+.................... #use delay (clock = 16000000)//frecuencia de reloj en 16 millones 
+00004:  CLRF   FEA
+00006:  MOVLW  07
+00008:  MOVWF  FE9
+0000A:  MOVF   FEF,W
+0000C:  BTFSC  FD8.2
+0000E:  GOTO   002E
+00012:  MOVLW  05
+00014:  MOVWF  01
+00016:  CLRF   00
+00018:  DECFSZ 00,F
+0001A:  BRA    0018
+0001C:  DECFSZ 01,F
+0001E:  BRA    0016
+00020:  MOVLW  2E
+00022:  MOVWF  00
+00024:  DECFSZ 00,F
+00026:  BRA    0024
+00028:  BRA    002A
+0002A:  DECFSZ FEF,F
+0002C:  BRA    0012
+0002E:  GOTO   0070 (RETURN)
+....................  
+.................... void main(void){ 
+00032:  CLRF   FF8
+00034:  BCF    FD0.7
+00036:  MOVF   FC1,W
+00038:  ANDLW  C0
+0003A:  IORLW  0F
+0003C:  MOVWF  FC1
+0003E:  MOVLW  07
+00040:  MOVWF  FB4
+.................... setup_oscillator(OSC_16MHZ); //se establece el clock otra vez. 
+00042:  MOVLW  60
+00044:  MOVWF  FD3
+00046:  MOVLW  40
+00048:  MOVWF  F9B
+0004A:  MOVF   FD3,W
+.................... set_tris_b(0x00);//Con este  comando establecemos  los puertos b en modo salida. 
+0004C:  MOVLW  00
+0004E:  MOVWF  F93
+.................... int contador = 128; //La variable. 
+00050:  MOVLW  80
+00052:  MOVWF  05
+.................... while(1){ 
+....................     output_b(contador); //La salida que tendrá el PIC. 
+00054:  CLRF   F93
+00056:  MOVFF  05,F8A
+....................     contador /= 2 ; 
+0005A:  BCF    FD8.0
+0005C:  RRCF   05,F
+....................     if (contador == 0) 
+0005E:  MOVF   05,F
+00060:  BNZ   0066
+....................     contador = 128; 
+00062:  MOVLW  80
+00064:  MOVWF  05
+....................     delay_ms(500); 
+00066:  MOVLW  02
+00068:  MOVWF  06
+0006A:  MOVLW  FA
+0006C:  MOVWF  07
+0006E:  BRA    0004
+00070:  DECFSZ 06,F
+00072:  BRA    006A
+00074:  BRA    0054
+....................    } 
+....................  
+.................... }  
+00076:  SLEEP 
+
+Configuration Fuses:
+   Word  1: 0200   HS NOFCMEN NOIESO
+   Word  2: 1E18   PUT NOBROWNOUT BORV21 NOWDT WDT32768
+   Word  3: 0500   CCP2C1 NOPBADEN LPT1OSC NOMCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

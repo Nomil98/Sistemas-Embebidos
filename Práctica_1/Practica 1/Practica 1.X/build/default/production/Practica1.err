@@ -1,0 +1,14 @@
+Compiling C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\Practica1 on 26-feb.-19 at 11:09
+C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\Practica1.c:1:8:  Error#18  File can not be opened
+    Not in source "18F4620.h"
+    Not in local "18F4620.h"
+    Not in project "C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\18F4620.h"
+    Not in default "C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\18F4620.h"
+C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\Practica1.c:2:7:  Error#128  A #DEVICE required before this line
+C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\Practica1.c:3:7:  Error#128  A #DEVICE required before this line
+C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\Practica1.c:4:5:  Error#128  A #DEVICE required before this line
+C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\Practica1.c:7:17:  Error#12  Undefined identifier  -- setup_oscillator
+C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\Practica1.c:8:11:  Error#12  Undefined identifier  -- set_tris_b
+C:\Users\Daniel Limón\Desktop\Puente\Practica 1\Practica 1.X\Practica1.c:12:13:  Error#12  Undefined identifier  -- output_b
+      7 Errors,  0 Warnings.
+Build Failed.

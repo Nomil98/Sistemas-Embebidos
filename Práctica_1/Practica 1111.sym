@@ -1,0 +1,67 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     main.contador
+006     main.@SCRATCH1
+007     @delay_ms1.P1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000032  @cinit1
+000032  main
+000042  @cinit2
+
+Project Directory:
+    C:\Users\Daniel Limón\Desktop\Tareas 4to Semestre\Sistemas Embebidos\Práctica_1\
+
+Project Files:
+    Practica 1111.c                                         [28-feb.-19 11:37  CRC=396BFB79]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4620.h [20-sep.-18 12:33  CRC=C9771D83]
+
+Source signature=CC5A367F
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=02A9
+
+Units:
+    Practica 1111 (main)
+
+Compiler Settings:
+    Processor:      PIC18F4620
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Practica 1111.xsym
+    Errors:      Practica 1111.err
+    Ext Symbols: Practica 1111.esym
+    INHX32:      Practica 1111.hex
+    Symbols:     Practica 1111.sym
+    List:        Practica 1111.lst
+    Debug/COFF:  Practica 1111.cof
+    Project:     Practica 1111.ccspjt
+    Call Tree:   Practica 1111.tre
+    Statistics:  Practica 1111.STA

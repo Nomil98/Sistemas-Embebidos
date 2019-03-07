@@ -1,0 +1,15 @@
+D G "__PCH__" 0 0 ""5.081""
+D G "__DEVICE__" 0 0 ""
+D G "__DATE__" 0 0 ""26-Feb-19""
+D G "__TIME__" 0 0 ""11:09:50""
+D G "_UNICODE" 0 0 ""?""
+D G "__EVAL" 0 0 ""?""
+D G "__18F4620" 0 0 "1"
+F N "main" 0 6 ""
+F G "main" 0 6 "void()" `39 
+C L "main" 0 0 1 "FUNCTION"
+C L "main" 0 0 1 "FUNCTION"
+V L "contador" 0 9 "int8" `42 
+C L "main" 0 0 1 "FUNCTION"
+F B "delay_ms" 1 0
+F B "delay_us" 1 0
