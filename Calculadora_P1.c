@@ -17,17 +17,17 @@ void main (void){
    set_tris_a(0xcf);
    set_tris_b(0xff);
    set_tris_c(0x00);
-   set_tris_d(0x80);
+   set_tris_d(0xE0);
    set_tris_e(0xf);
    int operacion=0;
    while(1){
        operando1 = input_a();
        operando2 = input_b();
        
-       if(input(PIN_B7)==1){
+       if(input(PIN_D6)==1){
            operando1*= -1;
        }
-        if(input(PIN_D6)==1){
+        if(input(PIN_B7)==1){
            operando2*= -1;
        }
        
